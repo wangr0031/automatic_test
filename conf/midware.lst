@@ -1,0 +1,24 @@
+zookeeper:
+  host_info:
+    - 172.16.80.44:root:1jian8Shu!
+    - 172.16.80.45:root:1jian8Shu!
+    - 172.16.80.46:root:1jian8Shu!
+  zk_client_port: 2181
+  zk_install_dir: /opt/zookeeper
+
+zmq:
+  host_info:
+    - 172.16.80.44:root:1jian8Shu!
+    - 172.16.80.45:root:1jian8Shu!
+  zmq_listen_port: 9876
+  zmq_install_dir: /var/zmq_namesrv
+  zmq_topic: FILE_REFUND_TOPIC
+
+zcache:
+  host_info:
+    - 172.16.80.44:root:1jian8Shu!
+    - 172.16.80.45:root:1jian8Shu!
+  zcache_port_list:
+    - 8001
+    - 8002
+  zcache_install_dir: /home/zcache
