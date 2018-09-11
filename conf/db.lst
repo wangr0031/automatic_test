@@ -1,4 +1,5 @@
 #dbtype:dbipaddress:dblisten_port:dbservice_name:dbuser:dbpasswd:role
-oracle:172.16.80.41:11521:cc:cpc:cpc:dba
-oracle:172.16.80.41:11521:cc:custc:custc:
-mysql:test
+oracle:172.16.80.42:11521:cc:cpc:cpc:
+oracle:172.16.80.42:11521:cc:system:system:dba
+oracle:172.16.80.42:11521:cc:custc:custc:
+oracle:172.16.80.42:11521:cc:oc:oc:

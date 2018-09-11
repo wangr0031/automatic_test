@@ -21,4 +21,4 @@ zcache:
   zcache_port_list:
     - 8001
     - 8002
-  zcache_install_dir: /home/zcache
+  zcache_install_dir: /zcache

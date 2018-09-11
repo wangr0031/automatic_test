@@ -65,16 +65,42 @@ class midwareTest(unittest.TestCase):
         print("测试结束...")
 
 
+class webTest(unittest.TestCase):
+    def setUp(self):
+        print("开始WEB页面测试...")
+
+    def test_web_url(self):
+        webconnect = check_web()
+        res = webconnect.open_web()
+        webconnect.close_browser()
+        self.assertTrue(res)
+
+    def test_web_login(self):
+        webconnect = check_web()
+        res1=webconnect.open_web()
+        res2=webconnect.login_web()
+        webconnect.close_browser()
+        self.assertTrue(res1)
+        self.assertTrue(res2)
+
+    def tearDown(self):
+        print("测试结束...")
+
+
 if __name__ == '__main__':
     import test_unit_cfg as test_unit
     import datetime
 
     basedir = os.path.dirname(os.path.abspath(__file__))
     report = os.path.join(basedir, 'data', 'test_report_{}.html'.format(datetime.datetime.now().strftime('%Y-%m-%d')))
+    #print(report)
     all_test_unit = test_unit.test_list
     st = unittest.TestSuite()
     # report = os.path.join('C:/Users/cc/Desktop/20180905/测试报告.html')
     st.addTests(all_test_unit)
+    # st.addTests([serverTest('test_connection'), databaseTest('test_databse_login'), databaseTest('test_db_usages_rate'),
+    #             midwareTest('test_zk_process'), midwareTest('test_zmq_process'), midwareTest('test_zcache_process')])
+
     with open(report, 'wb') as f:
         runner = HTMLTestRunner(f, verbosity=2, title='部署完成-测试报告', description='执行人：python脚本')
         runner.run(st)

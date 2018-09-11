@@ -1,0 +1,11 @@
+web_url: http://172.16.80.44/portal-web/
+# chrome,firefox
+web_driver: chrome
+web_login:
+  username_ele_by_name: userCode
+  password_ele_by_name: password
+  login_ele_by_xpath: //div[@class='form-group']/button[@type='button']
+  is_login_ele_by_xpath: //*[@class="msg-title"]
+  username: admin
+  password: 123
+  is_login_value: WELCOME TO
